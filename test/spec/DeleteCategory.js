@@ -31,7 +31,8 @@ describe('API Tests - Delete Category', () => {
 
       expect(response.status).to.equal(200);
       expect(response.body.status).to.equal('success');
-      expect(response.body.data).to.deep.equal({}); // Menentukan response body kosong
+      expect(response.body.data).to.deep.equal({});
+      console.log(response.body); 
     });
   });
 
@@ -42,6 +43,7 @@ describe('API Tests - Delete Category', () => {
 
       expect(response.status).to.equal(404);
       expect(response.body.status).to.equal('fail');
+      console.log(response.body);
     });
   });
 });

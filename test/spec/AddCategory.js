@@ -38,7 +38,7 @@ describe('API Tests KasirAja - Add Category', () => {
     expect(response.body.name).not.to.be.null;
     expect(response.body.description).not.to.be.null;
     expect(sharedId.categoryId).to.not.be.undefined;
-    // Simpan categoryId di variabel
+    console.log(response.body);
     sharedId.categoryId = response.body.data.categoryId;
   });
 
@@ -48,5 +48,6 @@ describe('API Tests KasirAja - Add Category', () => {
 
     expect(response.status).to.equal(400);
     expect(response.body.status).to.equal('fail');
+    console.log(response.body);
   });
 });

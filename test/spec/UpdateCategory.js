@@ -34,6 +34,7 @@ describe('API Tests - Update Category', () => {
       expect(response.status).to.equal(200);
       expect(response.body.status).to.equal('success');
       expect(response.body.data.name).to.equal(updtcategory.name);
+      console.log(response.body);
     });
   });
 
@@ -44,6 +45,7 @@ describe('API Tests - Update Category', () => {
 
       expect(response.status).to.equal(404);
       expect(response.body.status).to.equal('fail');
+      console.log(response.body);
     });
   });
 });

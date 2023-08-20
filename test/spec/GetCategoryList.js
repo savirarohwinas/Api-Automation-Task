@@ -31,6 +31,7 @@ describe('API Tests KasirAja - Get List Category', () => {
       expect(response.body.data).to.have.property('categories');
       expect(response.body.data.categories).to.be.an('array');
       expect(response.body.data.meta).to.be.an('object');
+      console.log(response.body);
     });
   });
 
@@ -41,6 +42,7 @@ describe('API Tests KasirAja - Get List Category', () => {
       expect(response.status).to.equal(401);
       expect(response.body.error).to.equal('Unauthorized');
       expect(response.body.message).to.equal('Missing authentication');
+      console.log(response.body);
     });
   });
 });
