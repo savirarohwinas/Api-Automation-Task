@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-20T06:22:04.062Z",
-    "end": "2023-08-20T06:22:05.684Z",
-    "duration": 1622,
+    "start": "2023-08-20T06:43:49.364Z",
+    "end": "2023-08-20T06:43:50.964Z",
+    "duration": 1600,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d2f68b4b-d35d-4bc6-946b-32426868afbe",
+      "uuid": "1ae0118a-68fa-4e4f-b6e7-95a70344b089",
       "title": "",
       "fullFile": "/workspaces/Api-Automation-Task/test/spec/UpdateCategory.js",
       "file": "/test/spec/UpdateCategory.js",
@@ -27,16 +27,16 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "81f48c40-1b15-4bd7-9f39-449a71a7899a",
-          "title": "API Tests - Update Category",
+          "uuid": "ee6f6f47-b8b7-481b-acf2-9fb963c59b35",
+          "title": "API Tests KasirAja- Update Category",
           "fullFile": "/workspaces/Api-Automation-Task/test/spec/UpdateCategory.js",
           "file": "/test/spec/UpdateCategory.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"API Tests - Update Category\"",
-              "fullTitle": "API Tests - Update Category \"before all\" hook in \"API Tests - Update Category\"",
+              "title": "\"before all\" hook in \"API Tests KasirAja- Update Category\"",
+              "fullTitle": "API Tests KasirAja- Update Category \"before all\" hook in \"API Tests KasirAja- Update Category\"",
               "timedOut": false,
-              "duration": 1112,
+              "duration": 1087,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "accessToken = await getAccessToken();",
               "err": {},
-              "uuid": "9b8721bb-b763-4eb9-8e9a-4f527e889005",
-              "parentUUID": "81f48c40-1b15-4bd7-9f39-449a71a7899a",
+              "uuid": "a816a248-760d-4cb0-92b7-86c0a565163e",
+              "parentUUID": "ee6f6f47-b8b7-481b-acf2-9fb963c59b35",
               "isHook": true,
               "skipped": false
             }
@@ -55,7 +55,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "0479be0d-202d-4948-8c55-51dc385ed048",
+              "uuid": "84bcfc25-d743-4251-9f9f-d06d6f94cd58",
               "title": "Positive Case (+) - Update Category yang sudah ada",
               "fullFile": "/workspaces/Api-Automation-Task/test/spec/UpdateCategory.js",
               "file": "/test/spec/UpdateCategory.js",
@@ -63,10 +63,10 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "should successfully update an existing category",
-                  "fullTitle": "API Tests - Update Category Positive Case (+) - Update Category yang sudah ada should successfully update an existing category",
+                  "title": "sukses update category dengan id valid",
+                  "fullTitle": "API Tests KasirAja- Update Category Positive Case (+) - Update Category yang sudah ada sukses update category dengan id valid",
                   "timedOut": false,
-                  "duration": 488,
+                  "duration": 492,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -75,26 +75,26 @@
                   "context": null,
                   "code": "await waitForCategoryIdToBeSet(sharedId.categoryId); \nconst response = await updateCategory(sharedId.categoryId, updtcategory);\nexpect(response.status).to.equal(200);\nexpect(response.body.status).to.equal('success');\nexpect(response.body.data.name).to.equal(updtcategory.name);\nconsole.log(response.body);",
                   "err": {},
-                  "uuid": "6edd81d6-e69e-410d-9c0c-4d056cbc19fe",
-                  "parentUUID": "0479be0d-202d-4948-8c55-51dc385ed048",
+                  "uuid": "024b49e6-9b46-453b-8262-8001d5f0b190",
+                  "parentUUID": "84bcfc25-d743-4251-9f9f-d06d6f94cd58",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "6edd81d6-e69e-410d-9c0c-4d056cbc19fe"
+                "024b49e6-9b46-453b-8262-8001d5f0b190"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 488,
+              "duration": 492,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "421c584b-10c0-442d-b4e5-69a76820cc84",
+              "uuid": "09d69704-11a9-4719-a704-619fa5012479",
               "title": "Negative Case (-) - Update Category dengan id tidak valid",
               "fullFile": "/workspaces/Api-Automation-Task/test/spec/UpdateCategory.js",
               "file": "/test/spec/UpdateCategory.js",
@@ -102,8 +102,8 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "should fail to update a non-existent category",
-                  "fullTitle": "API Tests - Update Category Negative Case (-) - Update Category dengan id tidak valid should fail to update a non-existent category",
+                  "title": "gagal update category dengan id tidak valid",
+                  "fullTitle": "API Tests KasirAja- Update Category Negative Case (-) - Update Category dengan id tidak valid gagal update category dengan id tidak valid",
                   "timedOut": false,
                   "duration": 14,
                   "state": "passed",
@@ -114,15 +114,15 @@
                   "context": null,
                   "code": "const invalidCategoryId = 12345567789; // Contoh ID yang tidak valid\nconst response = await updateCategory(invalidCategoryId, updtcategory);\nexpect(response.status).to.equal(404);\nexpect(response.body.status).to.equal('fail');\nconsole.log(response.body);",
                   "err": {},
-                  "uuid": "4245b058-1cf8-4aca-af80-2d15b44d2eba",
-                  "parentUUID": "421c584b-10c0-442d-b4e5-69a76820cc84",
+                  "uuid": "99dfb7c7-360a-4a51-9d84-562134e82626",
+                  "parentUUID": "09d69704-11a9-4719-a704-619fa5012479",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "4245b058-1cf8-4aca-af80-2d15b44d2eba"
+                "99dfb7c7-360a-4a51-9d84-562134e82626"
               ],
               "failures": [],
               "pending": [],

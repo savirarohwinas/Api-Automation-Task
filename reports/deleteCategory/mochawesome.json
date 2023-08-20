@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-20T06:22:04.074Z",
-    "end": "2023-08-20T06:22:06.147Z",
-    "duration": 2073,
+    "start": "2023-08-20T06:43:49.373Z",
+    "end": "2023-08-20T06:43:51.428Z",
+    "duration": 2055,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1f24c755-3dd9-4f9b-9063-a0dc1d26a62b",
+      "uuid": "2f8cf7ee-0c8a-4e97-be14-4499609302a5",
       "title": "",
       "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
       "file": "/test/spec/DeleteCategory.js",
@@ -27,16 +27,16 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7d653128-df63-44bb-b89d-3ff65a3515c0",
-          "title": "API Tests - Delete Category",
+          "uuid": "0033ce7c-8460-4e3b-a2d2-80836d775ec2",
+          "title": "API Tests KasirAja - Delete Category",
           "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
           "file": "/test/spec/DeleteCategory.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"API Tests - Delete Category\"",
-              "fullTitle": "API Tests - Delete Category \"before all\" hook in \"API Tests - Delete Category\"",
+              "title": "\"before all\" hook in \"API Tests KasirAja - Delete Category\"",
+              "fullTitle": "API Tests KasirAja - Delete Category \"before all\" hook in \"API Tests KasirAja - Delete Category\"",
               "timedOut": false,
-              "duration": 1100,
+              "duration": 1091,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "accessToken = await getAccessToken();",
               "err": {},
-              "uuid": "d4aba285-0ed0-42bf-8f2b-a22431448a18",
-              "parentUUID": "7d653128-df63-44bb-b89d-3ff65a3515c0",
+              "uuid": "01f41b8c-3333-46ed-96b2-da39715f2e22",
+              "parentUUID": "0033ce7c-8460-4e3b-a2d2-80836d775ec2",
               "isHook": true,
               "skipped": false
             }
@@ -55,18 +55,18 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fb6da8bb-d973-4d10-b182-6ce7a227c1ad",
-              "title": "Positive Case (+) - Delete Existing Category",
+              "uuid": "3dca7bbd-8a24-4db3-a4c3-0264182cc01a",
+              "title": "Positive Case (+) - Delete Category",
               "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
               "file": "/test/spec/DeleteCategory.js",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "should successfully delete an existing category",
-                  "fullTitle": "API Tests - Delete Category Positive Case (+) - Delete Existing Category should successfully delete an existing category",
+                  "title": "sukses menghapus kategori",
+                  "fullTitle": "API Tests KasirAja - Delete Category Positive Case (+) - Delete Category sukses menghapus kategori",
                   "timedOut": false,
-                  "duration": 486,
+                  "duration": 481,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -75,37 +75,37 @@
                   "context": null,
                   "code": "await waitForCategoryIdToBeSet(sharedId.categoryId);\nconst response = await deleteCategory(sharedId.categoryId);\nexpect(response.status).to.equal(200);\nexpect(response.body.status).to.equal('success');\nexpect(response.body.data).to.deep.equal({});\nconsole.log(response.body);",
                   "err": {},
-                  "uuid": "c0422d39-7150-45b8-ba31-230af4626edf",
-                  "parentUUID": "fb6da8bb-d973-4d10-b182-6ce7a227c1ad",
+                  "uuid": "f4b2d2df-ce13-48ad-8d40-d6901beb6b31",
+                  "parentUUID": "3dca7bbd-8a24-4db3-a4c3-0264182cc01a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c0422d39-7150-45b8-ba31-230af4626edf"
+                "f4b2d2df-ce13-48ad-8d40-d6901beb6b31"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 486,
+              "duration": 481,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "e9ce108b-4edd-488c-964b-45af58652a2a",
-              "title": "Negative Case (-) - Delete Non-existent Category",
+              "uuid": "97512c59-12ed-4e75-af14-23f777d94ab8",
+              "title": "Negative Case (-) - Delete Category dengan id tidak valid",
               "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
               "file": "/test/spec/DeleteCategory.js",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "should fail to delete a non-existent category",
-                  "fullTitle": "API Tests - Delete Category Negative Case (-) - Delete Non-existent Category should fail to delete a non-existent category",
+                  "title": "gagal delete category dengan id tidak valid",
+                  "fullTitle": "API Tests KasirAja - Delete Category Negative Case (-) - Delete Category dengan id tidak valid gagal delete category dengan id tidak valid",
                   "timedOut": false,
-                  "duration": 480,
+                  "duration": 478,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -114,20 +114,20 @@
                   "context": null,
                   "code": "const invalidCategoryId = 12345567789; // Contoh ID yang tidak valid\nconst response = await deleteCategory(invalidCategoryId);\nexpect(response.status).to.equal(404);\nexpect(response.body.status).to.equal('fail');\nconsole.log(response.body);",
                   "err": {},
-                  "uuid": "e0004d6d-ca97-4847-8332-7168126101de",
-                  "parentUUID": "e9ce108b-4edd-488c-964b-45af58652a2a",
+                  "uuid": "fd3dcca8-26c3-4db1-92b0-fd606856cf74",
+                  "parentUUID": "97512c59-12ed-4e75-af14-23f777d94ab8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "e0004d6d-ca97-4847-8332-7168126101de"
+                "fd3dcca8-26c3-4db1-92b0-fd606856cf74"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 480,
+              "duration": 478,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

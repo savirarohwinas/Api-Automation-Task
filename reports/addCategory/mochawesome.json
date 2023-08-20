@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-20T06:22:04.056Z",
-    "end": "2023-08-20T06:22:05.685Z",
-    "duration": 1629,
+    "start": "2023-08-20T06:43:49.371Z",
+    "end": "2023-08-20T06:43:50.957Z",
+    "duration": 1586,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c226d849-e062-45d8-bbeb-3cb161dd0edd",
+      "uuid": "7697024c-e063-463c-988d-434006632b20",
       "title": "",
       "fullFile": "/workspaces/Api-Automation-Task/test/spec/AddCategory.js",
       "file": "/test/spec/AddCategory.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "31df73fc-fe9c-4f9a-abfc-2ffb03846ad6",
+          "uuid": "73bdd6e0-200e-46b1-adba-da7be2fea8e2",
           "title": "API Tests KasirAja - Add Category",
           "fullFile": "/workspaces/Api-Automation-Task/test/spec/AddCategory.js",
           "file": "/test/spec/AddCategory.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"API Tests KasirAja - Add Category\"",
               "fullTitle": "API Tests KasirAja - Add Category \"before all\" hook in \"API Tests KasirAja - Add Category\"",
               "timedOut": false,
-              "duration": 1120,
+              "duration": 1077,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "accessToken = await getAccessToken();",
               "err": {},
-              "uuid": "80be63ef-7d16-4259-af76-79387d976411",
-              "parentUUID": "31df73fc-fe9c-4f9a-abfc-2ffb03846ad6",
+              "uuid": "0ab4d12f-9a27-4956-9702-71de5df19c70",
+              "parentUUID": "73bdd6e0-200e-46b1-adba-da7be2fea8e2",
               "isHook": true,
               "skipped": false
             }
@@ -57,7 +57,7 @@
               "title": "Positive Case (+) - Sukses Menambahkan Kategori Baru",
               "fullTitle": "API Tests KasirAja - Add Category Positive Case (+) - Sukses Menambahkan Kategori Baru",
               "timedOut": false,
-              "duration": 487,
+              "duration": 490,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -66,8 +66,8 @@
               "context": null,
               "code": "const response = await addCategory(category1);\nexpect(response.status).to.equal(201);\nexpect(response.body.status).to.equal('success');\nexpect(response.body.data.name).to.equal(category1.name);\nexpect(response.body.name).not.to.be.null;\nexpect(response.body.description).not.to.be.null;\nexpect(sharedId.categoryId).to.not.be.undefined;\nconsole.log(response.body);\nsharedId.categoryId = response.body.data.categoryId;",
               "err": {},
-              "uuid": "ca241d7b-0b2b-4a72-8141-e693f765f208",
-              "parentUUID": "31df73fc-fe9c-4f9a-abfc-2ffb03846ad6",
+              "uuid": "7418a063-89ba-4078-856d-1ff0ba930a02",
+              "parentUUID": "73bdd6e0-200e-46b1-adba-da7be2fea8e2",
               "isHook": false,
               "skipped": false
             },
@@ -75,7 +75,7 @@
               "title": "Negative case (-) - Gagal Menambahkan Kategori baru karena kolom nama kosong",
               "fullTitle": "API Tests KasirAja - Add Category Negative case (-) - Gagal Menambahkan Kategori baru karena kolom nama kosong",
               "timedOut": false,
-              "duration": 18,
+              "duration": 13,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -84,21 +84,21 @@
               "context": null,
               "code": "const response = await addCategory(category2);\nexpect(response.status).to.equal(400);\nexpect(response.body.status).to.equal('fail');\nconsole.log(response.body);",
               "err": {},
-              "uuid": "eb9be436-4559-48da-9ee3-fcafc2496308",
-              "parentUUID": "31df73fc-fe9c-4f9a-abfc-2ffb03846ad6",
+              "uuid": "96fc744c-4132-44db-9551-62ce981ad404",
+              "parentUUID": "73bdd6e0-200e-46b1-adba-da7be2fea8e2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ca241d7b-0b2b-4a72-8141-e693f765f208",
-            "eb9be436-4559-48da-9ee3-fcafc2496308"
+            "7418a063-89ba-4078-856d-1ff0ba930a02",
+            "96fc744c-4132-44db-9551-62ce981ad404"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 505,
+          "duration": 503,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -8,7 +8,7 @@ const sharedId = require('../../data/categoryId');
 const baseUrl = 'https://kasir-api.belajarqa.com';
 const kasiraja = supertest(baseUrl);
 
-describe('API Tests - Delete Category', () => {
+describe('API Tests KasirAja - Delete Category', () => {
   let accessToken;
 
   before(async () => {
@@ -23,8 +23,8 @@ describe('API Tests - Delete Category', () => {
     return response;
   }
 
-  describe('Positive Case (+) - Delete Existing Category', () => {
-    it('should successfully delete an existing category', async () => {
+  describe('Positive Case (+) - Delete Category', () => {
+    it('sukses menghapus kategori', async () => {
       await waitForCategoryIdToBeSet(sharedId.categoryId);
 
       const response = await deleteCategory(sharedId.categoryId);
@@ -36,8 +36,8 @@ describe('API Tests - Delete Category', () => {
     });
   });
 
-  describe('Negative Case (-) - Delete Non-existent Category', () => {
-    it('should fail to delete a non-existent category', async () => {
+  describe('Negative Case (-) - Delete Category dengan id tidak valid', () => {
+    it('gagal delete category dengan id tidak valid', async () => {
       const invalidCategoryId = 12345567789; // Contoh ID yang tidak valid
       const response = await deleteCategory(invalidCategoryId);
 

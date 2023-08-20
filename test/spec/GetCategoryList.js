@@ -31,7 +31,7 @@ describe('API Tests KasirAja - Get List Category', () => {
       expect(response.body.data).to.have.property('categories');
       expect(response.body.data.categories).to.be.an('array');
       expect(response.body.data.meta).to.be.an('object');
-      console.log(response.body);
+      console.log(JSON.stringify(response.body, null, 2));
     });
   });
 

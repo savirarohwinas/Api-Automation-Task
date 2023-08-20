@@ -10,7 +10,7 @@ const kasiraja = supertest(baseUrl);
 
 const data = require('../../data/Category.js');
 const updtcategory = data.Update_Categories;
-describe('API Tests - Update Category', () => {
+describe('API Tests KasirAja- Update Category', () => {
   let accessToken;
 
   before(async () => {
@@ -27,7 +27,7 @@ describe('API Tests - Update Category', () => {
   }
 
   describe('Positive Case (+) - Update Category yang sudah ada', () => {
-    it('should successfully update an existing category', async () => {
+    it('sukses update category dengan id valid', async () => {
       await waitForCategoryIdToBeSet(sharedId.categoryId); 
       const response = await updateCategory(sharedId.categoryId, updtcategory);
 
@@ -39,7 +39,7 @@ describe('API Tests - Update Category', () => {
   });
 
   describe('Negative Case (-) - Update Category dengan id tidak valid', () => {
-    it('should fail to update a non-existent category', async () => {
+    it('gagal update category dengan id tidak valid', async () => {
       const invalidCategoryId = 12345567789; // Contoh ID yang tidak valid
       const response = await updateCategory(invalidCategoryId, updtcategory);
 
