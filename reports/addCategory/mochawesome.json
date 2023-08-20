@@ -1,0 +1,140 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-20T06:10:18.363Z",
+    "end": "2023-08-20T06:10:20.388Z",
+    "duration": 2025,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "74697826-0bca-4109-9a8f-f651919f50ae",
+      "title": "",
+      "fullFile": "/workspaces/Api-Automation-Task/test/spec/AddCategory.js",
+      "file": "/test/spec/AddCategory.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "48878b57-7233-48ef-b34f-76296b44884a",
+          "title": "API Tests KasirAja - Add Category",
+          "fullFile": "/workspaces/Api-Automation-Task/test/spec/AddCategory.js",
+          "file": "/test/spec/AddCategory.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"API Tests KasirAja - Add Category\"",
+              "fullTitle": "API Tests KasirAja - Add Category \"before all\" hook in \"API Tests KasirAja - Add Category\"",
+              "timedOut": false,
+              "duration": 1304,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "accessToken = await getAccessToken();",
+              "err": {},
+              "uuid": "7a3b208e-e79e-4ef8-9458-36021568fc6b",
+              "parentUUID": "48878b57-7233-48ef-b34f-76296b44884a",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Positive Case (+) - Sukses Menambahkan Kategori Baru",
+              "fullTitle": "API Tests KasirAja - Add Category Positive Case (+) - Sukses Menambahkan Kategori Baru",
+              "timedOut": false,
+              "duration": 555,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await addCategory(category1);\nexpect(response.status).to.equal(201);\nexpect(response.body.status).to.equal('success');\nexpect(response.body.data.name).to.equal(category1.name);\nexpect(response.body.name).not.to.be.null;\nexpect(response.body.description).not.to.be.null;\nexpect(sharedId.categoryId).to.not.be.undefined;\n// Simpan categoryId di variabel\nsharedId.categoryId = response.body.data.categoryId;",
+              "err": {},
+              "uuid": "a8ba4b4d-081c-4b2a-9304-5cc10ac0047f",
+              "parentUUID": "48878b57-7233-48ef-b34f-76296b44884a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Negative case (-) - Gagal Menambahkan Kategori baru karena kolom nama kosong",
+              "fullTitle": "API Tests KasirAja - Add Category Negative case (-) - Gagal Menambahkan Kategori baru karena kolom nama kosong",
+              "timedOut": false,
+              "duration": 159,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await addCategory(category2);\nexpect(response.status).to.equal(400);\nexpect(response.body.status).to.equal('fail');",
+              "err": {},
+              "uuid": "d3427105-a273-42e3-a291-5f2b238f411a",
+              "parentUUID": "48878b57-7233-48ef-b34f-76296b44884a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8ba4b4d-081c-4b2a-9304-5cc10ac0047f",
+            "d3427105-a273-42e3-a291-5f2b238f411a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 714,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/addCategory"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-20T06:10:18.382Z",
+    "end": "2023-08-20T06:10:20.239Z",
+    "duration": 1857,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "69749916-2f70-4369-a60c-7a3a3252ff74",
+      "title": "",
+      "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
+      "file": "/test/spec/DeleteCategory.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27b193f0-f8db-4299-9d89-72e8a3b03c54",
+          "title": "API Tests - Delete Category",
+          "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
+          "file": "/test/spec/DeleteCategory.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"API Tests - Delete Category\"",
+              "fullTitle": "API Tests - Delete Category \"before all\" hook in \"API Tests - Delete Category\"",
+              "timedOut": false,
+              "duration": 1293,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "accessToken = await getAccessToken();",
+              "err": {},
+              "uuid": "6d46e17d-5371-4504-a0f5-d816f6037358",
+              "parentUUID": "27b193f0-f8db-4299-9d89-72e8a3b03c54",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "27b824a6-d562-49b2-a2fc-a01ce60b4bec",
+              "title": "Positive Case (+) - Delete Existing Category",
+              "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
+              "file": "/test/spec/DeleteCategory.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should successfully delete an existing category",
+                  "fullTitle": "API Tests - Delete Category Positive Case (+) - Delete Existing Category should successfully delete an existing category",
+                  "timedOut": false,
+                  "duration": 514,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "await waitForCategoryIdToBeSet(sharedId.categoryId);\nconst response = await deleteCategory(sharedId.categoryId);\nexpect(response.status).to.equal(200);\nexpect(response.body.status).to.equal('success');\nexpect(response.body.data).to.deep.equal({}); // Menentukan response body kosong",
+                  "err": {},
+                  "uuid": "e7bf8ad3-78f7-4c97-9cfa-76f29b630f6a",
+                  "parentUUID": "27b824a6-d562-49b2-a2fc-a01ce60b4bec",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e7bf8ad3-78f7-4c97-9cfa-76f29b630f6a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 514,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "600599bf-47a8-487b-b12c-20ea71cfc080",
+              "title": "Negative Case (-) - Delete Non-existent Category",
+              "fullFile": "/workspaces/Api-Automation-Task/test/spec/DeleteCategory.js",
+              "file": "/test/spec/DeleteCategory.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should fail to delete a non-existent category",
+                  "fullTitle": "API Tests - Delete Category Negative Case (-) - Delete Non-existent Category should fail to delete a non-existent category",
+                  "timedOut": false,
+                  "duration": 44,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const invalidCategoryId = 12345567789; // Contoh ID yang tidak valid\nconst response = await deleteCategory(invalidCategoryId);\nexpect(response.status).to.equal(404);\nexpect(response.body.status).to.equal('fail');",
+                  "err": {},
+                  "uuid": "13b8e608-aff2-4462-b94b-8c2fe67e8c4d",
+                  "parentUUID": "600599bf-47a8-487b-b12c-20ea71cfc080",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "13b8e608-aff2-4462-b94b-8c2fe67e8c4d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 44,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/deleteCategory"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

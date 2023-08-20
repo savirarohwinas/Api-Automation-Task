@@ -1,0 +1,33 @@
+{
+  "name": "api-automation-task",
+  "version": "1.0.0",
+  "description": "tugas pekanan 4 api automation",
+  "main": "index.js",
+  "scripts": {
+    "test:add": "mocha test/spec/AddCategory.js",
+    "test:get": "mocha test/spec/GetCategoryList.js",
+    "test:update": "mocha test/spec/UpdateCategory.js",
+    "test:delete": "mocha test/spec/DeleteCategory.js",
+    "html-report:add": "node reports/open-report.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savirarohwinas/Api-Automation-Task.git"
+  },
+  "author": "Savira Rohwina sakti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/savirarohwinas/Api-Automation-Task/issues"
+  },
+  "homepage": "https://github.com/savirarohwinas/Api-Automation-Task#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mochawesome": "^7.1.3",
+    "supertest": "^6.3.3",
+    "webdriverio": "^8.15.4"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "open": "^9.1.0"
+  }
+}
